@@ -1,0 +1,81 @@
+/* src/Styles/accordion.css */
+
+.accordion {
+    background-color: transparent;
+    color: inherit;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.accordion button {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid var(--border);
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.accordion button:hover {
+    background-color: var(--bg-special);
+}
+
+/* Active Tab */
+.accordion button.active {
+    background-color: var(--brand-primary);
+    color: white;
+    border-color: var(--brand-primary);
+}
+
+.accordion button.active:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+/* Panel Content */
+.panel {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    padding: 20px;
+    overflow: hidden;
+    display: none;
+    border-left: 4px solid var(--brand-primary);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 10px;
+}
+
+.panel.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Tab content text styling */
+.tab {
+    padding: 10px 0;
+    line-height: 1.6;
+}
+
+.tab p, .tab strong, .tab li {
+    color: var(--text-main);
+}
+
+.tab ul {
+    margin-left: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

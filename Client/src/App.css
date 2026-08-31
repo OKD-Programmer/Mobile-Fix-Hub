@@ -1,0 +1,132 @@
+/* Global Styles to remove horizontal scroll */
+body, html {
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* FIX: Dynamic background and text color */
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main App Container */
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent; /* Allow body color to show */
+}
+
+/* Main content area - grows to push footer down */
+main {
+    flex: 1;
+    width: 100%;
+}
+
+/* NavBar offset for fixed navbar */
+.App-NavBar {
+    padding-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .App-NavBar {
+        padding-top: 70px; /* Smaller offset for mobile */
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Box sizing reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Ensure full width for all sections */
+.App > * {
+    width: 100%;
+}
+
+/* Footer stays at bottom */
+.App {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Loading states */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    color: var(--text-main);
+}
+
+/* Error states */
+.error {
+    color: var(--danger);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Success states */
+.success {
+    color: var(--success);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Remove the old React default styles since you're not using them */
+.App-logo,
+.App-header,
+.App-link {
+    display: none;
+}
+
+/* Optional: Add some global styles for consistency */
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+input, textarea {
+    font-family: inherit;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-card);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}

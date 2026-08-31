@@ -1,0 +1,185 @@
+/* src/Styles/AdminDashboard.css */
+
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-page h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+/* Order List Container */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Order Card */
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid #e1e5e9;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fdfdfd;
+}
+
+.order-info h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.order-info p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.order-price {
+  text-align: right;
+}
+
+.order-price h3 {
+  color: #27ae60;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.btn-toggle {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-toggle:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Items Table Section */
+.order-items {
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th, 
+.items-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.items-table th {
+  background-color: #eee;
+  color: #333;
+  font-weight: bold;
+}
+
+.items-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   DARK MODE
+======================== */
+
+body.dark .dashboard-page h1 {
+  color: #e2e8f0;
+  border-bottom-color: #a8c0ff;
+}
+
+body.dark .order-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .order-header {
+  background: #2a2a2a;
+}
+
+body.dark .order-info h3,
+body.dark .order-info p {
+  color: #cbd5e0;
+}
+
+body.dark .order-price h3 {
+  color: #48bb78;
+}
+
+body.dark .btn-toggle {
+  border-color: #a8c0ff;
+  color: #a8c0ff;
+}
+
+body.dark .btn-toggle:hover {
+  background: #a8c0ff;
+  color: #2d3748;
+}
+
+body.dark .order-items {
+  background: #1a202c;
+  border-top-color: #4a5568;
+}
+
+body.dark .items-table th, 
+body.dark .items-table td {
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+body.dark .items-table th {
+  background-color: #4a5568;
+}
+
+body.dark .items-table tr:hover {
+  background-color: #2d3748;
+}

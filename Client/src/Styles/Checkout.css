@@ -1,0 +1,155 @@
+/* =========================
+   LIGHT MODE STYLES
+========================================= */
+
+.checkout-page .checkout-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.checkout-form,
+.order-summary {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order-summary li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 2px solid #ddd;
+    padding-top: 1rem;
+}
+
+.summary-total h3 {
+    margin: 0;
+    color: #27ae60;
+    font-size: 1.5rem;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+.checkout-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   DARK MODE STYLES (.force-dark)
+========================================= */
+
+/* Container Background */
+.force-dark.checkout-page {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+/* Forms & Summary Cards */
+.force-dark .checkout-form,
+.force-dark .order-summary {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+/* Headings */
+.force-dark h1,
+.force-dark .checkout-form h2,
+.force-dark .order-summary h2 {
+    color: #e2e8f0;
+}
+
+.force-dark .summary-total h3 {
+    color: #48bb78;
+}
+
+/* Labels */
+.force-dark .checkout-form label {
+    color: #cbd5e0;
+}
+
+/* Inputs & Textareas */
+.force-dark .checkout-form input,
+.force-dark .checkout-form textarea {
+    background-color: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+/* List Items */
+.force-dark .order-summary li {
+    color: #cbd5e0;
+    border-bottom-color: #4a5568;
+}
+
+.force-dark .summary-total {
+    border-top-color: #4a5568;
+}
+
+/* Button */
+.force-dark .checkout-btn {
+    background: linear-gradient(135deg, #a8c0ff 0%, #c2e9fb 100%);
+    color: #1a202c;
+    box-shadow: 0 4px 15px rgba(168, 192, 255, 0.3);
+}
+
+.force-dark .checkout-btn:hover {
+    box-shadow: 0 8px 20px rgba(168, 192, 255, 0.5);
+}

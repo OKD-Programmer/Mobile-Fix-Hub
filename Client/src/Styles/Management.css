@@ -1,0 +1,255 @@
+/* src/Styles/Management.css */
+
+/* =========================
+   LIGHT MODE STYLES (Updated)
+========================= */
+.phone-management, .parts-management, .accessories-management {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.management-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.management-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row input, .form-row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+.file-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-preview {
+  margin-top: 15px;
+}
+
+.image-preview img {
+  max-width: 150px;
+  max-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* === UPDATED FORM BUTTONS (Modern Style) === */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Updated: More rounded */
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button (Green Gradient) */
+.form-buttons button[type="submit"] {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+.form-buttons button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+}
+
+/* Cancel/Delete Button (Red Gradient) */
+.form-buttons button[type="button"] {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3);
+}
+
+.form-buttons button[type="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(192, 57, 43, 0.4);
+}
+/* === END UPDATED BUTTONS === */
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.item-details h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.item-details p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+.item-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.item-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+
+/* =========================
+   DARK MODE FIXES (Updated)
+========================= */
+
+/* Container */
+body.dark .phone-management, 
+body.dark .parts-management, 
+body.dark .accessories-management {
+  color: #e2e8f0;
+}
+
+/* Sections (Form Containers & List Container) */
+body.dark .management-section {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Headings */
+body.dark .management-section h2 {
+  color: #ffffff;
+}
+
+/* Form Inputs & Dropdowns */
+body.dark .form-row input, 
+body.dark .form-row select {
+  background-color: #1a202c;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Search Box Input */
+body.dark .search-box input {
+  background-color: #1a202c;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Item Cards */
+body.dark .item-card {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  color: #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Card Text */
+body.dark .item-details h3 {
+  color: #ffffff;
+}
+
+body.dark .item-details p {
+  color: #cbd5e0;
+}
+
+/* === UPDATED DARK MODE BUTTONS === */
+/* The gradient works well in dark mode, we just enhance the shadow */
+
+body.dark .form-buttons button[type="submit"] {
+  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
+}
+
+body.dark .form-buttons button[type="button"] {
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
+}
+
+/* Edit/Delete Button Adjustments */
+body.dark .edit-btn {
+  background-color: #d69e2e; /* Darker yellow for contrast */
+  color: #000;
+}
+
+body.dark .delete-btn {
+  background-color: #c53030; /* Darker red */
+  color: #fff;
+}

@@ -1,0 +1,60 @@
+/* =========================================
+   THEME.CSS (Centralized Color System)
+========================================= */
+
+:root {
+  /* --- COLORS (Light Mode) --- */
+  --bg-body: #ffffff;
+  --bg-card: #f8f9fa;
+  --bg-special: #e3f2fd; /* Light Blue for Contact Info */
+  --text-main: #333333;
+  --text-secondary: #7f8c8d;
+  --border: #e1e5e9;
+  
+  /* --- BRAND COLORS --- */
+  --brand-primary: #667eea;
+  --brand-secondary: #764ba2;
+  --info: #1565c0;
+  --success: #28a745;
+  --danger: #e74c3c;
+
+  /* --- BRAND GRADIENTS --- */
+  /* Purple Gradient (Phones, Products, Contact Us) */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Blue Gradient (Footer, NavBar) */
+  --gradient-secondary: linear-gradient(135deg, #4485da 0%, #6ba8e9 100%);
+}
+
+/* --- DARK MODE OVERRIDES --- */
+body.dark {
+  /* --- COLORS (Dark Mode) --- */
+  --bg-body: #1a202c;
+  --bg-card: #2d3748;
+  --bg-special: #2d3748; /* Matches card bg in dark mode */
+  --text-main: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --border: #4a5568;
+
+  /* --- BRAND COLORS --- */
+  --brand-primary: #a8c0ff;
+  --brand-secondary: #c2e9fb;
+  --info: #63b3ed;
+  --success: #48bb78;
+  --danger: #fc8181;
+
+  /* --- BRAND GRADIENTS (Dark Mode) --- */
+  --gradient-primary: linear-gradient(135deg, #a8c0ff 0%, #c2e9fb 100%);
+  --gradient-secondary: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+/* --- GLOBAL FORCE FIX --- */
+/* This overrides hardcoded styles in other pages */
+.page {
+    background-color: var(--bg-body) !important;
+    color: var(--text-main) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page h1, .page h2, .page h3, .page h4 {
+    color: var(--text-main) !important;
+}

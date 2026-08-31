@@ -1,0 +1,132 @@
+/* Main Container */
+.order-confirmation-page {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px 20px;
+    /* Top padding for fixed Navbar */
+    background-color: #f5f7fa;
+    transition: background-color 0.3s ease;
+}
+
+.confirmation-card {
+    max-width: 500px;
+    width: 100%;
+    padding: 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.confirmation-card h1 {
+    color: #28a745;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.confirmation-card h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.confirmation-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.order-info {
+    margin: 2rem 0;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #28a745;
+}
+
+.order-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* --- BUTTON STYLES --- */
+.btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+
+/* =========================================
+   DARK MODE (WILDCARD SELECTORS)
+   Applies if any parent element has class containing "dark"
+========================================= */
+
+/* 1. Dark Background for Page */
+[class*="dark"] .order-confirmation-page {
+    background-color: #1a202c !important;
+    color: #e2e8f0;
+}
+
+/* 2. Dark Card */
+[class*="dark"] .confirmation-card {
+    background-color: #2d3748 !important;
+    border-color: #4a5568 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    color: #e2e8f0;
+}
+
+/* 3. Text Colors */
+[class*="dark"] .confirmation-card h1 {
+    color: #48bb78 !important;
+}
+
+[class*="dark"] .confirmation-card h2 {
+    color: #e2e8f0 !important;
+}
+
+[class*="dark"] .confirmation-card p {
+    color: #cbd5e0 !important;
+}
+
+/* 4. Order Info Box */
+[class*="dark"] .order-info {
+    background-color: #4a5568 !important;
+    border-left: 5px solid #48bb78 !important;
+    color: #e2e8f0;
+}
+
+[class*="dark"] .order-info strong {
+    color: #ffffff !important;
+}
+
+/* 5. Button (.btn-primary) Dark Mode */
+[class*="dark"] .btn-primary {
+    background: linear-gradient(135deg, #a8c0ff 0%, #c2e9fb 100%) !important;
+    color: #2d3748 !important;
+    box-shadow: 0 4px 15px rgba(168, 192, 255, 0.3) !important;
+}
+
+[class*="dark"] .btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(168, 192, 255, 0.5) !important;
+    transform: translateY(-2px);
+}
